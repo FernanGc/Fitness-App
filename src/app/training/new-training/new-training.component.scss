@@ -1,0 +1,24 @@
+.new__training {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 40rem;
+
+    }
+}
+
+// mat-card-content {
+//     align-self: center;
+// }
+
+mat-card-actions {
+    align-self: flex-end;
+}
+

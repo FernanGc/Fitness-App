@@ -1,0 +1,47 @@
+.content__toolbar-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+    font-size: 1.5rem;
+    list-style: none;
+  
+    li {
+      margin-right: 1rem;
+    }
+  
+    li a{
+      color: white;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      color: #cacaca;
+    }
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // background-color: darkgray;
+    width: 25rem;
+    height: 5rem;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: darkcyan;
+    width: 20rem;
+    height: 5rem;
+  }
+  
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // background-color: darkgoldenrod;
+    width: 20rem;
+    height: 5rem;
+  }

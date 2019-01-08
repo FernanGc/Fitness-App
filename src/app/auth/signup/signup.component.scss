@@ -1,0 +1,34 @@
+.sigup__section {
+    font-size: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: burlywood;
+}
+
+.sigup__form {
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &-title{
+        font-size: 3rem;
+        color: #3F51B5;
+        align-self: center;
+        margin-bottom: 30px;
+    }
+
+    &-button {
+        width: 100px;
+        align-self: flex-end;
+    }
+
+    &-input {
+        margin-bottom: 20px;
+    }
+}

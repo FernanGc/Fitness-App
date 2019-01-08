@@ -1,0 +1,63 @@
+<section class="sigup__section">
+  <form class="sigup__form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-card-title class="sigup__form-title">Sign Up</mat-card-title>
+      <mat-form-field class="sigup__form-input">
+        <input 
+          ngModel 
+          name="email" 
+          matInput  
+          placeholder="Email"
+          type="email" 
+          email
+          required
+          #emailInput="ngModel">
+            <mat-error *ngIf="emailInput.hasError('email') && !emailInput.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailInput.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+      </mat-form-field>
+      <mat-form-field class="sigup__form-input">
+        <input 
+          ngModel 
+          name="password" 
+          matInput  
+          placeholder="Password"
+          type="password"
+          required
+          minlength="6"
+          #pwInput="ngModel">
+          <mat-error>
+              Shult be at least <strong>6 charactes long {{pwInput.value?.length}}/6</strong>
+          </mat-error>
+      </mat-form-field>
+      <mat-form-field class="sigup__form-input">
+          <input 
+            ngModel 
+            name="birthday"
+            matInput 
+            [matDatepicker]="picker" 
+            placeholder="Your birthdate"
+            [max]="maxDate" 
+            #dateInput="ngModel"
+            required> 
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="dateInput.hasError('required')">
+              Your birthday is <strong>required</strong>
+          </mat-error>
+      </mat-form-field>
+      
+      <mat-checkbox ngModel name="agree" class="sigup__form-input" color="primary" required>
+        I agree with the terms and conditions.
+      </mat-checkbox>
+      
+      <button 
+        type="submit"
+        mat-raised-button 
+        class="sigup__form-button" 
+        color="primary"
+        [disabled]="f.invalid">Primary</button>
+  </form>
+</section>

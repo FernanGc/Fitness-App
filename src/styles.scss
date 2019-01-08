@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 
+        1rem = 10px;
+        10px / 16px = 62.5%;
+        This defines what 1rem is.
+    */
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
